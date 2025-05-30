@@ -735,6 +735,7 @@ section,
   .hero h6 {
     font-size: 10px;
     width: 43%;
+    text-align: left;
   }
 
   .hero h2 {
