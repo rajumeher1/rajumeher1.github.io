@@ -157,7 +157,7 @@ h6 {
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 25px 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -746,16 +746,18 @@ section,
   }
 }
 
-.social-bottom-left {
-  position: relative;
+.social {
+  position:relative;
   bottom: 180px;
-  left: 50px;
+  margin-left: 50px;
   display: flex;
   gap: 15px;
   z-index: 1000;
+  overflow: auto;
+  flex-wrap: wrap;
 }
 
-.social-bottom-left a {
+.social a {
   color: rgb(48, 151, 199);
   background-color: transparent;
   padding: 10px 15px;
@@ -772,41 +774,40 @@ section,
   width: 80px;
 }
 
-.social-bottom-left a:hover {
+.social a:hover {
   opacity: 0.9;
   transform: translateY(-2px);
 }
 
-.social-bottom-left .linkedin {
+.social .linkedin {
   background-color: rgb(26, 24, 24);
 }
 
-.social-bottom-left .github {
+.social .github {
   background-color: rgb(26, 24, 24);
 }
 
 /* 🌐 Responsive layout for mobile */
 @media (max-width: 576px) {
-  .social-bottom-left {
+  .social {
     flex-direction: column;
-    left: 10px;
-    bottom: 100px;
+    margin-left: 4px;
+    bottom: 150px;
     gap: 10px;
     /* z-index: 1; */
   }
 
-  .social-bottom-left a {
+  .social a {
     width: max-content;
     padding: 10px 12px;
     font-size: 12px;
     width: 80px;
   }
-  .social-bottom-left a:hover {
+  .social a:hover {
   opacity: 0.9;
   transform: translateY(-2px);
   }
 }
-
 
 
 /*--------------------------------------------------------------
@@ -941,6 +942,24 @@ section,
   background: var(--background-color);
   border: 2px solid var(--accent-color);
 }
+
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #3097c7;
+  font-weight: 600;
+  transition: color 0.3s;
+  font-size: 2rem;
+}
+
+.resume-link:hover {
+  color: #2077a5;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 
 /*--------------------------------------------------------------
 # Services Section
